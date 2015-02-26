@@ -1,16 +1,17 @@
 ## 移动端测试分享 ios-Hybrid-真机 篇
 
-> 本文用自己写的一个软件为例，总结一下hybrid移动端测试流程
+> 本文用自己写的一个示例 App 为例，总结一下hybrid移动端测试流程
 
-### [软件地址](https://github.com/xudafeng/hybrid_sample_ios)
+### [App 地址](https://github.com/xudafeng/hybrid_sample_ios)
 
 ### 测试流程
 
-
+启动 App -> 进入欢迎界面 -> 进入登录界面 -> 输入正确用户名密码 ->
+进入 webview 界面 -> 验证 webview 中内容是否正确
 
 ### 展现效果
 
-![flow](https://raw.githubusercontent.com/iscanner/hybrid_ios_automation/master/screenshot/flow.gif)
+![flow](https://raw.githubusercontent.com/xudafeng/hybrid_ios_automation/master/screenshot/flow.gif)
 
 ### 全部测试代码 [下载](https://github.com/xudafeng/hybrid_ios_automation)
 
