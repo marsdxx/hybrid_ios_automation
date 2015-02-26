@@ -1,0 +1,38 @@
+{
+  "name": "appium-hybrid-sample-code",
+  "version": "1.0.0",
+  "description": "ui automation test with appium for hybrid",
+  "main": "index.js",
+  "author": "xudafeng",
+  "email": "xudafeng@126.com",
+  "blog": "http://xdf.me",
+  "keywords": [
+    "appium",
+    "ios"
+  ],
+  "scripts": {
+    "test": "make test",
+    "jshint": "make jshint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xudafeng/hybrid_ios_automation.git"
+  },
+  "homepage": "https://github.com/xudafeng/hybrid_ios_automation",
+  "dependencies": {
+    "colors": "^1.0.3"
+  },
+  "precommit": [
+    "jshint"
+  ],
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1",
+    "should": "~4.0.4",
+    "mocha": "*",
+    "wd": "^0.3.11",
+    "jshint": "*",
+    "startserver": "*"
+  },
+  "license": "MIT"
+}
