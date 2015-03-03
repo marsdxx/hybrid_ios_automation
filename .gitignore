@@ -4,6 +4,7 @@ logs
 *.log
 *.swp
 *.swo
+*.swn
 .sw*
 .idea/*
 
