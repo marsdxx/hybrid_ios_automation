@@ -66,7 +66,7 @@ $ appium
 
 #### 开启权限
 
-运行测试脚本前需要开启 `simulator` 的执行权限，见代码[authorize_ios 授权](https://github.com/xudafeng/hybrid_ios_automation/blob/master/Makefile#L10)
+运行测试脚本前需要开启 `simulator` 的执行权限，见代码 [authorize_ios 授权](https://github.com/xudafeng/hybrid_ios_automation/blob/master/Makefile#L10)
 
 #### mocha
 
