@@ -32,7 +32,8 @@
     "mocha": "*",
     "wd": "^0.3.11",
     "jshint": "*",
-    "startserver": "*"
+    "startserver": "*",
+    "commander": "~2.0.0"
   },
   "license": "MIT"
 }

@@ -9,7 +9,8 @@
 ## quick start
 
 ```bash
-$ make test
+$ make test     // for real iphone
+$ make testsim  // for xcode simulator
 ```
 
 ## documentation

@@ -5,7 +5,9 @@ all: test
 install:
 	@npm install
 test: install
-	@./node_modules/.bin/mocha
+	@./node_modules/.bin/mocha ./test/hybrid.test.js
+testsim: install
+	@echo Requires root permission. && sudo authorize_ios && ./node_modules/.bin/mocha -s ./test/hybrid.test.js
 jshint:
 	@./node_modules/jshint/bin/jshint .
 server:

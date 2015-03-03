@@ -6,8 +6,13 @@
 
 ### 测试流程
 
-启动 App -> 进入欢迎界面 -> 进入登录界面 -> 输入正确用户名密码 ->
-进入 webview 界面 -> 验证 webview 中内容是否正确
+-> 启动 App
+-> 进入欢迎界面
+-> 进入登录界面
+-> 输入正确用户名密码
+-> 进入 webview 界面
+-> 验证 webview 中内容是否符合预期
+-> 查看终端报告器
 
 ### 展现效果
 
@@ -29,13 +34,16 @@ Appium 就不介绍了，[官网](http://appium.io/)，本文使用1.3.x版本
 
 #### 配置项
 
+真机运行与模拟器运行主要是配置项的差异，详见这篇文章
+
 ```javascript
 
-var driverCfg = {
+var realDriverCfg = {
   'appium-version': '1.3',
   platformName: 'iOS',
   platformVersion: '8.1',
   deviceName: 'iPhone Simulator',
+  udid: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   app: 'com.xudafeng.hybrid-sample-ios' //这里是 bundleId
 };
 
@@ -49,7 +57,7 @@ var remoteCfg = {
 #### 建立连接
 
 ```bash
-$ appium -U udid
+$ appium
 ```
 推荐使用启动参数加手机 udid 启动 appium，会看到系统与手机开始建立 session
 连接，方便在 session 存活期内向手机端发送请求。
@@ -94,11 +102,11 @@ $ make test
 ```javascript
 'use strict';
 
-var Base = require('..');
 var wd = require('wd');
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
-var TouchAction = wd.TouchAction;
+
+var Base = require('..');
 
 chai.use(chaiAsPromised);
 chaiAsPromised.transferPromiseness = wd.transferPromiseness;
@@ -122,12 +130,12 @@ describe('hybrid ios test case', function () {
       .tap()
       .sleep(1000);
   });
-  it('should go to login page', function() {
+  it('should go to webview page', function() {
     return driver
-      .elementByXPath('//UIATextField[@*]')
+      .elementByXPath('//UIATextField[1]')
       .sendKeys('test')
       .sleep(1000)
-      .elementByXPath('//UIATextField[last()]')
+      .elementByXPath('//UIATextField[2]')
       .sendKeys('123456')
       .sleep(1000)
       .elementByName('login')

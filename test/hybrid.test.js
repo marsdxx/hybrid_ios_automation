@@ -1,10 +1,10 @@
 'use strict';
 
-var Base = require('..');
 var wd = require('wd');
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
-var TouchAction = wd.TouchAction;
+
+var Base = require('..');
 
 chai.use(chaiAsPromised);
 chaiAsPromised.transferPromiseness = wd.transferPromiseness;
@@ -30,10 +30,10 @@ describe('hybrid ios test case', function () {
   });
   it('should go to webview page', function() {
     return driver
-      .elementByXPath('//UIATextField[@*]')
+      .elementByXPath('//UIATextField[1]')
       .sendKeys('test')
       .sleep(1000)
-      .elementByXPath('//UIATextField[last()]')
+      .elementByXPath('//UIATextField[2]')
       .sendKeys('123456')
       .sleep(1000)
       .elementByName('login')
