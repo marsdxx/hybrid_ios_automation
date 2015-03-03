@@ -4,7 +4,13 @@
 
 ## screenshot
 
+### real iphone
+
 ![flow](./screenshot/flow.gif)
+
+### xcode simulator
+
+![flow](./screenshot/flow-sim.gif)
 
 ## quick start
 

@@ -6,6 +6,7 @@
 
 ### 测试流程
 
+-> 启动模拟器
 -> 启动 App
 -> 进入欢迎界面
 -> 进入登录界面
@@ -16,7 +17,7 @@
 
 ### 展现效果
 
-![flow](https://raw.githubusercontent.com/xudafeng/hybrid_ios_automation/master/screenshot/flow.gif)
+![flow](https://raw.githubusercontent.com/xudafeng/hybrid_ios_automation/master/screenshot/flow-sim.gif)
 
 ### 全部测试代码 [下载](https://github.com/xudafeng/hybrid_ios_automation)
 
@@ -33,6 +34,8 @@ Appium 就不介绍了，[官网](http://appium.io/)，本文使用1.3.x版本
 ### 步骤
 
 #### 配置项
+
+真机运行与模拟器运行主要是配置项的差异，详见[这篇文章](http://testerhome.com/topics/2063)
 
 ```javascript
 
@@ -61,9 +64,9 @@ $ appium
 
 注意：如果发现脚本执行不成功的话，不妨先检测连接是否还在。
 
-#### 权限开启
+#### 开启权限
 
-运行测试脚本前需要开启 `simulator` 的执行权限，见代码[]()
+运行测试脚本前需要开启 `simulator` 的执行权限，见代码[authorize_ios 授权](https://github.com/xudafeng/hybrid_ios_automation/blob/master/Makefile#L10)
 
 #### mocha
 
@@ -138,7 +141,6 @@ describe('hybrid ios test case', function () {
     })
   });
 });
-
 
 ```
 
