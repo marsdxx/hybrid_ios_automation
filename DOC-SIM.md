@@ -54,6 +54,13 @@ var remoteCfg = {
 
 ```
 
+#### 准备 debug 文件包
+
+可以看到上面配置项中的 `hybrid_sample_ios.app.zip`，如何生成呢？
+在 xcode 中选择模拟器进行构建，点击左侧栏 Product 目录下的 `.app` 文件，在右侧栏就可看到 `Full path`。也可以把文件压缩为 `.zip` 格式，appium 会自动解压。
+
+注意：不推荐使用 `xcodebuild` 生成此 `.app` 文件。
+
 #### 建立连接
 
 ```bash
